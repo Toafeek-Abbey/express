@@ -5,26 +5,26 @@ const router = express.Router()
 const items = [
 ]
 
-router.get("/", (req,res) =>
+router.get("/items/", (req,res) =>
 {
     console.log(items)
-     res.send("Hello World")
+     res.send("All Items")
 })
 
-router.post("/", (req, res) => {
+router.post("/items/", (req, res) => {
     const item = req.body;
     items.push({  ...item, id: uuidv4() })
     res.send(`Item with the name ${item.name}  added to the database`)
 })
 
-router.get("/:id", (req, res) => {
+router.get("/items/:id", (req, res) => {
    const { id } = req.params;
    const findItem = items.find((item) => item.id === id)
    
     res.send(findItem)
 })
 
-router.delete("/:id", (req, res) => {
+router.delete("/items/:id", (req, res) => {
     const {id} = req.params;
 
     items.filter((item) => item.id !== id)
@@ -32,7 +32,7 @@ router.delete("/:id", (req, res) => {
     res.send(`item with the ${id} is deleted from the database`)
 })
 
-router.put("/:id", (req, res) => {
+router.put("/items/:id", (req, res) => {
     const { id } = req.params;
     const name = req.body
     const description = req.body

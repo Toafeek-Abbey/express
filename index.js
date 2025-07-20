@@ -11,7 +11,7 @@ const PORT = 5000
 app.use(bodyParser.json())
 
 
-app.use("/items", userRouter)
+app.use("/", userRouter)
 
 app.get("/", (req,res) => res.send("Hello World"))
 
