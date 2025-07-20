@@ -13,4 +13,4 @@ Use the const router for a post request to add an items without id also sending 
 Use the const router for a get request to fetch an item with id also sending a res to notify that the programme is running on get req to show an item with specific id.
 Use the const router for a delete request to fetch an item with id also sending a res to notify that the programme is running on get req that an item is deleted from the database.
 Use the const router for a put request to fetch an item with id also sending a res to notify that the programme is running on get req that an item is updated from the database.
-Paste the http://localhost:5000/items/ on postman to taste all router requuest and all walks 100%
+Paste the http://localhost:5000/items/ on postman to taste all router requuest and all walks 
